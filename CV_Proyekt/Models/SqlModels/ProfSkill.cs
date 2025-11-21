@@ -1,6 +1,6 @@
 ﻿namespace CV_Proyekt.Models.SqlModels
 {
-    public class ProfSkills
+    public class ProfSkill
     {
         public long id {  get; set; }
         public decimal Communication { get; set; }

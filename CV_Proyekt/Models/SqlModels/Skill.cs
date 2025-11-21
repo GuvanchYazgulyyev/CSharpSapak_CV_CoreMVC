@@ -1,6 +1,6 @@
 ﻿namespace CV_Proyekt.Models.SqlModels
 {
-    public class Skills
+    public class Skill
     {
 
         public long Id { get; set; }
