@@ -6,7 +6,8 @@ namespace CV_Proyekt.Models.SqlModels
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("data source=DESKTOP-6CBBCTI; initial catalog=CoreMvcCVDb;TrustServerCertificate=True;");
+            //optionsBuilder.UseSqlServer("data source=DESKTOP-6CBBCTI; initial catalog=CoreMvcCVDb;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-DCL0L79\\GUVANCH; initial catalog=CoreMvcCVDb;Integrated Security=true;TrustServerCertificate=True;");
         }
 
         public DbSet<AboutMe> AboutMes { get; set; }

@@ -1,49 +1,238 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CV_Proyekt</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/CV_Proyekt.styles.css" asp-append-version="true" />
+    <title>Maha - Personal CV/Resume Template | Home 1 </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Maha Personal cv/resume template for professional and personal website." />
+    <meta name="keywords" content="creative, cv, designer,  online cv, online resume, powerful portfolio, professional, professional resume, responsive, resume, vcard " />
+    <meta name="developer" content="Md. Siful Islam">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- FAV AND ICONS   -->
+    <link rel="shortcut icon" href="~/CV_Template/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="~/CV_Template/assets/images/apple-icon.png">
+    <link rel="shortcut icon" sizes="72x72" href="~/CV_Template/assets/images/apple-icon-72x72.png">
+    <link rel="shortcut icon" sizes="114x114" href="~/CV_Template/assets/images/apple-icon-114x114.png">
+
+    <!-- Google Font-->
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/CV_Template/assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/CV_Template/assets/plugins/css/bootstrap.min.css">
+    <!-- Animate CSS-->
+    <link rel="stylesheet" href="~/CV_Template/assets/plugins/css/animate.css">
+    <!-- Owl Carousel CSS-->
+    <link rel="stylesheet" href="~/CV_Template/assets/plugins/css/owl.css">
+    <!-- Fancybox-->
+    <link rel="stylesheet" href="~/CV_Template/assets/plugins/css/jquery.fancybox.min.css">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="~/CV_Template/assets/css/styles.css">
+    <link rel="stylesheet" href="~/CV_Template/assets/css/responsive.css">
+
+    <!-- Colors -->
+    <link rel="alternate stylesheet" href="~/CV_Template/assets/css/colors/blue.css" title="blue">
+    <link rel="stylesheet" href="~/CV_Template/assets/css/colors/defauld.css" title="defauld">
+    <link rel="alternate stylesheet" href="~/CV_Template/assets/css/colors/green.css" title="green">
+    <link rel="alternate stylesheet" href="~/CV_Template/assets/css/colors/blue-munsell.css" title="blue-munsell">
+    <link rel="alternate stylesheet" href="~/CV_Template/assets/css/colors/orange.css" title="orange">
+    <link rel="alternate stylesheet" href="~/CV_Template/assets/css/colors/purple.css" title="purple">
+    <link rel="alternate stylesheet" href="~/CV_Template/assets/css/colors/slate.css" title="slate">
+    <link rel="alternate stylesheet" href="~/CV_Template/assets/css/colors/yellow.css" title="yellow">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CV_Proyekt</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+<body class="white-vertion black-bg">
+    <!-- Start Loader -->
+    <div class="section-loader">
+        <div class="loader">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- End Loader -->
+    <!--
+    ===================
+       NAVIGATION
+    ===================
+    -->
+    <header class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav wow fadeInUp" id="mh-header">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg mh-nav nav-btn">
+                    <a class="navbar-brand" href="#">
+                        <img src="" alt="" class="img-fluid">
+                        <!-- <h2>Maha</h2> -->
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-0 ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#mh-home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#mh-about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#mh-skills">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#mh-experience">Experiences</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#mh-portfolio">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#mh-pricing">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#mh-blog">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#mh-contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!--
+
+    @RenderBody()
+    ==============
+    * JS Files *
+    ==============
+    -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery -->
+    <script src="~/CV_Template/assets/plugins/js/jquery.min.js"></script>
+    <!-- popper -->
+    <script src="~/CV_Template/assets/plugins/js/popper.min.js"></script>
+    <!-- bootstrap -->
+    <script src="~/CV_Template/assets/plugins/js/bootstrap.min.js"></script>
+    <!-- owl carousel -->
+    <script src="~/CV_Template/assets/plugins/js/owl.carousel.js"></script>
+    <!-- validator -->
+    <script src="~/CV_Template/assets/plugins/js/validator.min.js"></script>
+    <!-- wow -->
+    <script src="~/CV_Template/assets/plugins/js/wow.min.js"></script>
+    <!-- mixin js-->
+    <script src="~/CV_Template/assets/plugins/js/jquery.mixitup.min.js"></script>
+    <!-- circle progress-->
+    <script src="~/CV_Template/assets/plugins/js/circle-progress.js"></script>
+    <!-- jquery nav -->
+    <script src="~/CV_Template/assets/plugins/js/jquery.nav.js"></script>
+    <!-- Fancybox js-->
+    <script src="~/CV_Template/assets/plugins/js/jquery.fancybox.min.js"></script>
+    <!-- isotope js-->
+    <script src="~/CV_Template/assets/plugins/js/isotope.pkgd.js"></script>
+    <script src="~/CV_Template/assets/plugins/js/packery-mode.pkgd.js"></script>
+    <!-- Map api -->
+    <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyCRP2E3BhaVKYs7BvNytBNumU0MBmjhhxc"></script>
+    <!-- Custom Scripts-->
+    <script src="~/CV_Template/assets/js/map-init.js"></script>
+    <script src="~/CV_Template/assets/js/custom-scripts.js"></script>
+
+
+    <!-- ****************
+      After neccessary customization/modification, Please minify
+      JavaScript/jQuery according to http://browserdiet.com/en/ for better performance
+    **************** -->
+    <!-- STYLE SWITCH STYLESHEET ONLY FOR DEMO -->
+    <link rel="stylesheet" href="demo/demo.css">
+    <script type="text/javascript" src="demo/styleswitcher.js"></script>
+    <script type="text/javascript" src="demo/demo.js"></script>
+    <div class="demo-style-switch" id="switch-style">
+        <a id="toggle-switcher" class="switch-button"><i class="fa fa-snowflake-o fa-spin"></i></a>
+        <div class="switched-options">
+            <ul>
+                <li class="mh-demo-styles">
+                    <h4>Style One </h4>
+                    <ul>
+                        <li>
+                            <a href="home-one.html"> <img src="assets/images/h1w.png" alt="" class="img-fluid"></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li>
+                            <a href="home-one-w.html"> <img src="assets/images/h1.png" alt="" class="img-fluid"></a>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+                </li>
+                <li class="mh-demo-styles">
+                    <h4>Style Two </h4>
+                    <ul>
+                        <li>
+                            <a href="home-two.html"> <img src="assets/images/h2w.png" alt="" class="img-fluid"></a>
+                        </li>
+                        <li>
+                            <a href="home-two-w.html"> <img src="assets/images/h2.png" alt="" class="img-fluid"></a>
+                        </li>
+                    </ul>
+                </li>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - CV_Proyekt - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                <li class="mh-demo-styles">
+                    <h4>RTl</h4>
+                    <ul>
+                        <li>
+                            <a href="home-rtl.html"> <img src="assets/images/h3w.png" alt="" class="img-fluid"></a>
+                        </li>
+                        <li>
+                            <a href="home-rtl-w.html"> <img src="assets/images/h3.png" alt="" class="img-fluid"></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="config-title">
+                Colors :
+            </div>
+            <ul class="styles">
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('blue'); return false;" title="Blue">
+                        <div class="blue"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('purple'); return false;" title="Purple">
+                        <div class="purple"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('blue-munsell'); return false;" title="Blue Munsell">
+                        <div class="blue-munsell"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('orange'); return false;" title="Orange">
+                        <div class="orange"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('slate'); return false;" title="Slate">
+                        <div class="slate"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('green'); return false;" title="Green">
+                        <div class="green"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('yellow'); return false;" title="Yellow">
+                        <div class="yellow"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('red'); return false;" title="Red">
+                        <div class="red"></div>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    </div>
 </body>
 </html>
