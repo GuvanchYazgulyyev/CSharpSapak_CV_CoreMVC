@@ -3,7 +3,7 @@
     public class Price
     {
         public long Id { get; set; }
-        public string IconUrl { get;set }
+        public string IconUrl { get; set; }
 
         public string TypeOfService { get; set; }
 

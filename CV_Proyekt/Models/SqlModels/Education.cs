@@ -2,7 +2,7 @@
 {
     public class Education
     {
-
+        public long  Id { get; set; }
         public string Title { get; set; }
         public bool isEnabled { get; set; } = true;
         public DateTime? Period { get; set; }
