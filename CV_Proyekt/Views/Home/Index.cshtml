@@ -1,8 +1,24 @@
 ﻿@{
-    ViewData["Title"] = "Salam Menn  Guwanç";
+    // Set the layout file (ensures the admin layout structure is used)
+    Layout = "_AdminLayout";
+
+    // Set the page title (appears in the browser tab and typically in the layout header)
+    ViewData["Title"] = "Admin Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row mb-4">
+    <div class="col">
+        <h1>Welcome to the Admin Dashboard</h1>
+        <p>Use the navigation links above to manage the data for your CV (About, Skills, Experience, etc.).</p>
+    </div>
+</div>
+
+<div class="text-center p-5 bg-light rounded shadow-sm">
+    <h2 class="display-6">Management Overview</h2>
+    <p>
+        Your CV project is using **ASP.NET Core MVC** and **Entity Framework Core**.
+        <br>
+        <a href="https://learn.microsoft.com/aspnet/core">Learn more about ASP.NET Core</a>.
+    </p>
+    @* You can add quick links or statistics here later *@
 </div>
