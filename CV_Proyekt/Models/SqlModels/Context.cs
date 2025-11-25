@@ -33,6 +33,7 @@ namespace CV_Proyekt.Models.SqlModels
         public DbSet<WhatIdo>  WhatIdos { get; set; }
          
         public DbSet<WorkExperience> WorkExperiences { get; set; }
+        public DbSet<TagSkill> TagSkills { get; set; }
     
     }
 }
