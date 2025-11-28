@@ -9,8 +9,5 @@
         public string IconClass { get; set; } // e.g., "fa fa-code"
         public string ColorClass { get; set; } // e.g., "iron-color"
         public string Delay { get; set; }      // e.g., "0.3s"
-
-
-
     }
 }
