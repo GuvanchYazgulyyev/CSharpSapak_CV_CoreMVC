@@ -4,10 +4,13 @@ namespace CV_Proyekt.Models.SqlModels
 {
     public class Context : DbContext
     {
+       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+
             optionsBuilder.UseSqlServer("Data source=DESKTOP-6CBBCTI; initial catalog=CoreMvcCVDb;Integrated Security=true;TrustServerCertificate=True;");
-            /*optionsBuilder.UseSqlServer("Data Source=DESKTOP-DCL0L79\\GUVANCH; initial catalog=CoreMvcCVDb;Integrated Security=true;TrustServerCertificate=True;");*/
+            //optionsBuilder.UseSqlServer("Data Source=DESKTOP-DCL0L79\\GUVANCH; initial catalog=CoreMvcCVDb;Integrated Security=true;TrustServerCertificate=True;");
+
         }
 
         public DbSet<AboutMe> AboutMes { get; set; }
