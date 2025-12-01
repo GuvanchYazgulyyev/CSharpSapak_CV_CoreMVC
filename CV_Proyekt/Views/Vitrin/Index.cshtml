@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<CV_Proyekt.Models.SqlModels.AboutMe>
+
 @{
     ViewData["Title"] = "Baş Sahypa";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,7 +12,7 @@
 -->
 <section class="mh-home" id="mh-home">
     <div class="home-ovimg">
-        @foreach (var item in Model)
+        @foreach (var item in Model)  
         {
             <div class="container">
                 <div class="row xs-column-reverse section-separator vertical-middle-content home-padding">
@@ -41,8 +42,8 @@
                     <div class="col-sm-6">
                         <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                             <div class="img-border">
-                                <img src="~/CV_Template/assets/images/hero.png" alt="" class="img-fluid">
-                                @*  <img src="@item.ImgUrl" alt="" class="img-fluid"> *@
+                              @*   <img src="~/CV_Template/assets/images/hero.png" alt="" class="img-fluid"> *@
+                                  <img src="@item.ImgUrl" alt="" class="img-fluid"> 
                             </div>
                         </div>
                     </div>
@@ -91,47 +92,10 @@
    SERVICE
 ===================
 -->
-<section class="mh-service">
-    <div class="container">
-        <div class="row section-separator">
-            <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                <h2>What I do</h2>
-            </div>
-            <div class="col-sm-4">
-                <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                    <i class="fa fa-bullseye purple-color"></i>
-                    <h3>UI Design</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                        magna aliquam erat volutpat.
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                    <i class="fa fa-code iron-color"></i>
-                    <h3>Web Development</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                        magna aliquam erat volutpat.
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                    <i class="fa fa-object-ungroup sky-color"></i>
-                    <h3>App Development</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                        magna aliquam erat volutpat.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+<section class="mh-service" id="mh-service">
+
+    @await Component.InvokeAsync("WhatIDoBolegi")
+
 </section>
 
 <!--
@@ -139,102 +103,11 @@
    SKILLS
 ===================
 -->
-<section class="mh-skills" id="mh-skills">
-    <div class="container">
-        <div class="row section-separator">
-            <div class="section-title text-center col-sm-12">
-                <!--<h2>Skills</h2>-->
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="mh-skills-inner">
-                    <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                        <h3>Technical Skills</h3>
-                        <div class="each-skills">
-                            <div class="candidatos">
-                                <div class="parcial">
-                                    <div class="info">
-                                        <div class="nome">Javascript</div>
-                                        <div class="percentagem-num">86%</div>
-                                    </div>
-                                    <div class="progressBar">
-                                        <div class="percentagem" style="width: 86%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="candidatos">
-                                <div class="parcial">
-                                    <div class="info">
-                                        <div class="nome">Java</div>
-                                        <div class="percentagem-num">46%</div>
-                                    </div>
-                                    <div class="progressBar">
-                                        <div class="percentagem" style="width: 46%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="candidatos">
-                                <div class="parcial">
-                                    <div class="info">
-                                        <div class="nome">Python</div>
-                                        <div class="percentagem-num">38%</div>
-                                    </div>
-                                    <div class="progressBar">
-                                        <div class="percentagem" style="width: 38%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="candidatos">
-                                <div class="parcial">
-                                    <div class="info">
-                                        <div class="nome">PHP</div>
-                                        <div class="percentagem-num">17%</div>
-                                    </div>
-                                    <div class="progressBar">
-                                        <div class="percentagem" style="width: 17%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="candidatos">
-                                <div class="parcial">
-                                    <div class="info">
-                                        <div class="nome">PHP</div>
-                                        <div class="percentagem-num">17%</div>
-                                    </div>
-                                    <div class="progressBar">
-                                        <div class="percentagem" style="width: 17%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="mh-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                    <h3>Professional Skills</h3>
-                    <ul class="mh-professional-progress">
-                        <li>
-                            <div class="mh-progress mh-progress-circle" data-progress="95"></div>
-                            <div class="pr-skill-name">Communication</div>
-                        </li>
-                        <li>
-                            <div class="mh-progress mh-progress-circle" data-progress="55"></div>
-                            <div class="pr-skill-name">Team Work</div>
-                        </li>
-                        <li>
-                            <div class="mh-progress mh-progress-circle" data-progress="86"></div>
-                            <div class="pr-skill-name">Project Management</div>
-                        </li>
-                        <li>
-                            <div class="mh-progress mh-progress-circle" data-progress="60"></div>
-                            <div class="pr-skill-name">Creativity</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<section class="mh-service" id="mh-service">
+<div class="col-sm-12 col-md-6">
+    @await Component.InvokeAsync("SkillsBolegi")
+</div>
+</section>>
 
 <!--
 ===================

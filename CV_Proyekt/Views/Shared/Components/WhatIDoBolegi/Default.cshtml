@@ -1,0 +1,22 @@
+﻿@model IEnumerable<CV_Proyekt.Models.SqlModels.WhatIdo>
+
+
+    <div class="container">
+        <div class="row section-separator">
+            <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <h2>What I do</h2>
+            </div>
+            @foreach (var x in Model)
+            {
+                <div class="col-sm-4">
+                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                    <img src="@x.IconsUrl" alt="@x.Title icon" class="service-icon-image" style="width: 50px; height: 50px;">
+                        <h3>@x.Title</h3>
+                        <p>
+                            @x.Description
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>

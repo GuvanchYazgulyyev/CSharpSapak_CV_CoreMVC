@@ -1,0 +1,26 @@
+﻿@model IEnumerable<CV_Proyekt.Models.SqlModels.Skill>
+
+<div class="mh-skills-inner">
+    <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+        <h3>Technical Skills</h3>
+        <div class="each-skills">
+
+            @* The loop replaces all the static 'candidatos' blocks *@
+            @foreach (var skill in Model)
+            {
+                <div class="candidatos">
+                    <div class="parcial">
+                        <div class="info">
+                            <div class="nome">@skill.Name</div>
+                            <div class="percentagem-num">@skill.Percentage%</div>
+                        </div>
+                        <div class="progressBar">
+                            <div class="percentagem" style="width: @skill.Percentage%;"></div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

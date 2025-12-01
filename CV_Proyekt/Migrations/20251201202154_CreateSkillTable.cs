@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CV_Proyekt.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class CreateSkillTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -197,9 +197,11 @@ namespace CV_Proyekt.Migrations
                 name: "Skill",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CSLanguages = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Percentage = table.Column<int>(type: "int", nullable: false),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -219,6 +221,19 @@ namespace CV_Proyekt.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SosialMediaIcons", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TagSkills",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TagSkills", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -290,6 +305,9 @@ namespace CV_Proyekt.Migrations
 
             migrationBuilder.DropTable(
                 name: "SosialMediaIcons");
+
+            migrationBuilder.DropTable(
+                name: "TagSkills");
 
             migrationBuilder.DropTable(
                 name: "WhatIdos");
