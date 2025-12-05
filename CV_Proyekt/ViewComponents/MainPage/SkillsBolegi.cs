@@ -1,29 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CV_Proyekt.Models.SqlModels;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
-    
-    
-    namespace CV_Proyekt.ViewComponents.MainPage
-{
 
+namespace CV_Proyekt.ViewComponents.MainPage
+{
     public class SkillsBolegi : ViewComponent
     {
-        private readonly Context _context;
+        // NOTE: The constructor that required Context dependency injection is removed.
 
-        public SkillsBolegi(Context context)
+        public async Task<IViewComponentResult> InvokeAsync()
         {
-            _context = context;
-        }
+            // Manually instantiate the Context since it is not being injected.
+            // The 'using' statement ensures the context object is properly disposed of.
+            using (var _context = new Context())
+            {
+                var allSkills = await _context.Skills
+                                              .Where(s => s.Type != null)
+                                              .ToListAsync();
 
-        public IViewComponentResult Invoke()
-        {
-            // Fetch all skills
-            var technicalSkills = _context.Skill
-                .Where(s => s.Type == "Technical") // Assuming you filter by a 'Type' property
-                .ToList();
+                // Group the skills by their Type property (e.g., "Technical" or "Professional")
+                var groupedSkills = allSkills.GroupBy(s => s.Type)
+                                             .OrderBy(g => g.Key);
 
-            // Pass the list to the component's view
-            return View(technicalSkills);
+                return View(groupedSkills);
+            }
         }
     }
 }

@@ -27,13 +27,17 @@ namespace CV_Proyekt.Models.SqlModels
 
         public DbSet<ReachMe> ReachMes { get; set; }
 
-        public DbSet<Skill> Skill { get; set; }
+        public DbSet<Skill> Skills { get; set; }
+
+        
 
         public DbSet<SosialMediaIcon> SosialMediaIcons { get; set; }
         public DbSet<WhatIdo>  WhatIdos { get; set; }
          
         public DbSet<WorkExperience> WorkExperiences { get; set; }
         public DbSet<TagSkill> TagSkills { get; set; }
+
+        public DbSet<Admin> Admins {  get; set; }
     
     }
 }
