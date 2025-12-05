@@ -7,10 +7,8 @@ namespace CV_Proyekt.Models.SqlModels
        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
-            optionsBuilder.UseSqlServer("Data source=DESKTOP-6CBBCTI; initial catalog=CoreMvcCVDb;Integrated Security=true;TrustServerCertificate=True;");
-            //optionsBuilder.UseSqlServer("Data Source=DESKTOP-DCL0L79\\GUVANCH; initial catalog=CoreMvcCVDb;Integrated Security=true;TrustServerCertificate=True;");
-
+            optionsBuilder.UseSqlServer("data source=DESKTOP-6CBBCTI; initial catalog=CoreMvcCVDb;Integrated Security=true;TrustServerCertificate=True;");
+           // optionsBuilder.UseSqlServer("Data Source=DESKTOP-DCL0L79\\GUVANCH; initial catalog=CoreMvcCVDb;Integrated Security=true;TrustServerCertificate=True;");
         }
 
         public DbSet<AboutMe> AboutMes { get; set; }
@@ -30,13 +28,17 @@ namespace CV_Proyekt.Models.SqlModels
 
         public DbSet<ReachMe> ReachMes { get; set; }
 
-        public DbSet<Skill> Skill { get; set; }
+        public DbSet<Skill> Skills { get; set; }
+
+        
 
         public DbSet<SosialMediaIcon> SosialMediaIcons { get; set; }
         public DbSet<WhatIdo>  WhatIdos { get; set; }
          
         public DbSet<WorkExperience> WorkExperiences { get; set; }
         public DbSet<TagSkill> TagSkills { get; set; }
+
+        public DbSet<Admin> Admins {  get; set; }
     
     }
 }

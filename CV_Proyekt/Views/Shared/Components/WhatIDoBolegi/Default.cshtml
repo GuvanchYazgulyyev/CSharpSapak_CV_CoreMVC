@@ -1,8 +1,6 @@
 ﻿@model IEnumerable<CV_Proyekt.Models.SqlModels.WhatIdo>
 
 
-
-<section class="mh-service">
     <div class="container">
         <div class="row section-separator">
             <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
@@ -12,7 +10,7 @@
             {
                 <div class="col-sm-4">
                     <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                        <i class="@x.IconsUrl"></i>
+                    <img src="@x.IconsUrl" alt="@x.Title icon" class="service-icon-image" style="width: 50px; height: 50px;">
                         <h3>@x.Title</h3>
                         <p>
                             @x.Description
@@ -22,4 +20,3 @@
             }
         </div>
     </div>
-</section>
