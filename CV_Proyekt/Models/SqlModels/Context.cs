@@ -4,6 +4,7 @@ namespace CV_Proyekt.Models.SqlModels
 {
     public class Context : DbContext
     {
+       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("data source=DESKTOP-6CBBCTI; initial catalog=CoreMvcCVDb;Integrated Security=true;TrustServerCertificate=True;");

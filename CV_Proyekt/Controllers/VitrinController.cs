@@ -18,11 +18,10 @@ namespace CV_Proyekt.Controllers
             var dataGetir = await db.AboutMes.OrderByDescending(f => f.Id).AsNoTracking().ToListAsync();
             return View(dataGetir);
         }
-
-        /// !!! TASK  Geljek sapaka  TAze Controller. Açmaly. Bu Controller Admin Tarapy üçindir!  21-11-2025
-        /// We şol bir wagtda  Admin üçin Layout açmaly. 
-        /// Controller için  CRUD işlemleri bolmaly. Controller içinde Dine Şuwagtlykça IActionRessultlar YAzylymaly.
-        /// We Mumyn daşyn  Login - Register üçin Taze bir Controller açmaly. İçinde Parolymy Yatdayn çykardymi rEgister, Login  Actionlary bolmaly. 
-        /// We Elbette. Data bazasyndaky Tablissalaryn hemmesine doly maglumat girmeli!!!
+       /// !!! TASK  Geljek sapaka  TAze Controller. Açmaly. Bu Controller Admin Tarapy üçindir!  21-11-2025
+       /// We şol bir wagtda  Admin üçin Layout açmaly. 
+       /// Controller için  CRUD işlemleri bolmaly. Controller içinde Dine Şuwagtlykça IActionRessultlar YAzylymaly.
+       /// We Mumyn daşyn  Login - Register üçin Taze bir Controller açmaly. İçinde Parolymy Yatdayn çykardymi rEgister, Login  Actionlary bolmaly. 
+       /// We Elbette. Data bazasyndaky Tablissalaryn hemmesine doly maglumat girmeli!!!
     }
 }
