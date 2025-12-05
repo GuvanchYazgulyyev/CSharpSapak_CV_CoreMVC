@@ -2,7 +2,7 @@
 {
     public class Contact
     {
-        public long Id{get;set;}
+        public Int64 Id {get;set;}
         public string AdressIconUrl { get;set;}
         public string Address { get;set;}
         public string StreetAndCity { get;set;}

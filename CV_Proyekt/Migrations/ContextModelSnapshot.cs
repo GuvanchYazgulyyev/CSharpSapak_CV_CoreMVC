@@ -22,7 +22,7 @@ namespace CV_Proyekt.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("CV_Proyekt.Models.SqlModels.AboutMe", b =>
+            modelBuilder.Entity("CV_Proyekt.Models.SqlModels.AboutMeData", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -60,7 +60,7 @@ namespace CV_Proyekt.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AboutMes");
+                    b.ToTable("AboutMeDatas");
                 });
 
             modelBuilder.Entity("CV_Proyekt.Models.SqlModels.Admin", b =>
@@ -414,11 +414,11 @@ namespace CV_Proyekt.Migrations
 
             modelBuilder.Entity("CV_Proyekt.Models.SqlModels.Skill", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -486,19 +486,11 @@ namespace CV_Proyekt.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<string>("ColorClass")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Delay")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IconClass")
+                    b.Property<string>("IconsUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

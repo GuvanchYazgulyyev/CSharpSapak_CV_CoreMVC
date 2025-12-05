@@ -2,7 +2,7 @@
 {
     public class ProfSkill
     {
-        public long id {  get; set; }
+        public Int64 id {  get; set; }
         public decimal Communication { get; set; }
         public decimal TeamWork { get; set; }
         public decimal ProjectManagement {  get; set; }

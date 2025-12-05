@@ -15,7 +15,7 @@ namespace CV_Proyekt.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var dataGetir = await db.AboutMes.OrderByDescending(f => f.Id).AsNoTracking().ToListAsync();
+            var dataGetir = await db.AboutMeDatas.OrderByDescending(f => f.Id).AsNoTracking().ToListAsync();
             return View(dataGetir);
         }
        /// !!! TASK  Geljek sapaka  TAze Controller. Açmaly. Bu Controller Admin Tarapy üçindir!  21-11-2025
