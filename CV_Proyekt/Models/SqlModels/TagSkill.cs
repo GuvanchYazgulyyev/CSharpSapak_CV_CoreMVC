@@ -2,7 +2,7 @@
 {
     public class TagSkill
     {
-        public long Id { get; set; }
+        public Int64 Id { get; set; }
         public string Title { get; set; }
     }
 }

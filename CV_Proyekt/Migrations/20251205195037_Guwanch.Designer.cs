@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CV_Proyekt.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20251124200809_FixDecimalPrecision")]
-    partial class FixDecimalPrecision
+    [Migration("20251205195037_Guwanch")]
+    partial class Guwanch
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace CV_Proyekt.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("CV_Proyekt.Models.SqlModels.AboutMe", b =>
+            modelBuilder.Entity("CV_Proyekt.Models.SqlModels.AboutMeData", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -63,7 +63,28 @@ namespace CV_Proyekt.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AboutMes");
+                    b.ToTable("AboutMeDatas");
+                });
+
+            modelBuilder.Entity("CV_Proyekt.Models.SqlModels.Admin", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Admins");
                 });
 
             modelBuilder.Entity("CV_Proyekt.Models.SqlModels.Blog", b =>
@@ -402,13 +423,20 @@ namespace CV_Proyekt.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<string>("CSLanguages")
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Percentage")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Skill");
+                    b.ToTable("Skills");
                 });
 
             modelBuilder.Entity("CV_Proyekt.Models.SqlModels.SosialMediaIcon", b =>
@@ -436,13 +464,30 @@ namespace CV_Proyekt.Migrations
                     b.ToTable("SosialMediaIcons");
                 });
 
-            modelBuilder.Entity("CV_Proyekt.Models.SqlModels.WhatIdo", b =>
+            modelBuilder.Entity("CV_Proyekt.Models.SqlModels.TagSkill", b =>
                 {
-                    b.Property<long>("id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TagSkills");
+                });
+
+            modelBuilder.Entity("CV_Proyekt.Models.SqlModels.WhatIdo", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -456,7 +501,7 @@ namespace CV_Proyekt.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("WhatIdos");
                 });

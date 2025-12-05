@@ -1,8 +1,8 @@
 ﻿namespace CV_Proyekt.Models.SqlModels
 {
-    public class AboutMe
+    public class AboutMeData
     {
-        public long Id { get; set; }
+        public Int64 Id { get; set; }
         public string NameSurname { get; set; }
         public string ImgUrl { get; set; }
         public string Description { get; set; }

@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CV_Proyekt.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class Guwanch : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "AboutMes",
+                name: "AboutMeDatas",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
@@ -27,7 +27,7 @@ namespace CV_Proyekt.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AboutMes", x => x.Id);
+                    table.PrimaryKey("PK_AboutMeDatas", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -211,7 +211,7 @@ namespace CV_Proyekt.Migrations
                 name: "Skills",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Percentage = table.Column<int>(type: "int", nullable: false),
@@ -254,7 +254,7 @@ namespace CV_Proyekt.Migrations
                 name: "WhatIdos",
                 columns: table => new
                 {
-                    id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IconsUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -262,7 +262,7 @@ namespace CV_Proyekt.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_WhatIdos", x => x.id);
+                    table.PrimaryKey("PK_WhatIdos", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -285,7 +285,7 @@ namespace CV_Proyekt.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "AboutMes");
+                name: "AboutMeDatas");
 
             migrationBuilder.DropTable(
                 name: "Admins");

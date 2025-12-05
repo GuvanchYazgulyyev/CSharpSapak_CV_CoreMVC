@@ -2,7 +2,7 @@
 {
     public class SosialMediaIcon
     {
-        public long Id { get; set; }
+        public Int64 Id { get; set; }
         public string Name { get; set; }
 
         public string  Decription { get; set; }

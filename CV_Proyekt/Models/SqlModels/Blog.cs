@@ -3,7 +3,7 @@
     public class Blog
     {
 
-        public long Id { get; set; }
+        public Int64 Id { get; set; }
 
         public string IconUrl { get; set; }
         public string Tag { get; set; }

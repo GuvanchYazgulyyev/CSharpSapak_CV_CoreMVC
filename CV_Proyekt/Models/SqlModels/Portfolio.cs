@@ -4,7 +4,7 @@ namespace CV_Proyekt.Models.SqlModels
 {
     public class Portfolio
     {
-        public long id { get; set; }
+        public Int64 id { get; set; }
         public string name { get; set; }
         public string Title { get; set; }
         public string IconUrl1 { get; set; }

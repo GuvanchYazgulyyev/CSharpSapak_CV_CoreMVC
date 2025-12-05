@@ -2,7 +2,7 @@
 {
     public class FeaturedPosts
     {
-        public long Id { get; set; }
+        public Int64 Id { get; set; }
         public string Title { get; set; }
 
         public DateTime? CreatedTime { get; set; }
